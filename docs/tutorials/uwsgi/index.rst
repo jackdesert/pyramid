@@ -1,7 +1,7 @@
 .. _uwsgi_tutorial:
 
-Running a CookieCutter :app:`Pyramid` Application under ``uWSGI`` and Nginx
-===========================================================================
+Running a CookieCutter :app:`Pyramid` Application under :app:`uWSGI` and :app:`Nginx`
+=====================================================================================
 
 :term:`uWSGI` is a software application for building hosting services.
 It is named after the Web Server Gateway Interface (the WSGI specification
