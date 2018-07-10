@@ -174,8 +174,9 @@ files.
 #.  Visit ``http://localhost`` in a browser.  You should see the
     sample application rendered in your browser.
 
-#.  If the app does not render in the browser, tail the nginx logs to
-    determine the cause. (Keep uWSGI running in a separate terminal window.)
+#.  If the app does not render in the browser, tail the nginx logs, then
+    refresh the browser window to determine the cause. (Keep uWSGI running in a
+    separate terminal window.)
 
     .. code-block:: bash
 
@@ -189,7 +190,7 @@ files.
     to put the socket and that it actually exists there.  Once both uWSGI and
     Nginx both point to the same file and both have access to its housing
     directory, you will be past this error.  If all else fails, put your
-    sockets somewhere writable by all, such as ``/tmp``
+    sockets somewhere writable by all, such as ``/tmp``.
 
     If you see an ``upstream prematurely closed connection while reading
     response header from upstream`` error in the Nginx error log, something is wrong
