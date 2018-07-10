@@ -98,7 +98,7 @@ files.
     See :ref:`logging_config`.
 
 
-#   Make a ``tmp`` directory in the project to house a pidfile and a unix
+#   Create a new directory at ``~/myproject/tmp`` to house a pidfile and a unix
     socket.  However, you'll need to make sure that *two* users have access to
     change into the ``~/myproject/tmp`` directory: your current user (mine is
     ``ubuntu`` and the user that Nginx will run as often named ``www-data`` or
