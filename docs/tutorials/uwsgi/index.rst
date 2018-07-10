@@ -182,14 +182,14 @@ files.
       $ cd /var/log/nginx
       $ tail -f error.log access.log
 
-    If you see an ``No such file or directory`` error in the Nginx error log, verify
-    the name of the socket file specified in
-    ``/etc/nginx/sites-enabled/myproject.conf``.  Verify that the file reference
-    there actually exists. If it does not, check where uWSGI is set to put the
-    socket and that it actually exists there.  Eventually you will get past
-    this error when both uWSGI and Nginx are both pointing to the same socket
-    file location, in a place where they both have access to it. If all else
-    fails, put your sockets somewhere writable by all, such as ``/tmp``
+    If you see an ``No such file or directory`` error in the Nginx error log,
+    verify the name of the socket file specified in
+    ``/etc/nginx/sites-enabled/myproject.conf``.  Verify that the file
+    reference there actually exists. If it does not, check where uWSGI is set
+    to put the socket and that it actually exists there.  Once both uWSGI and
+    Nginx both point to the same file and both have access to its housing
+    directory, you will be past this error.  If all else fails, put your
+    sockets somewhere writable by all, such as ``/tmp``
 
     If you see an ``upstream prematurely closed connection while reading
     response header from upstream`` error in the Nginx error log, something is wrong
