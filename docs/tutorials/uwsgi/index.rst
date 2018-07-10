@@ -3,8 +3,6 @@
 Running a CookieCutter :app:`Pyramid` Application under ``uWSGI`` and Nginx
 ===========================================================================
 
-uWSGI  that "aims at developing a full stack for building hosting services".[2] [2]
-
 :term:`uWSGI` is a software application for building hosting services.
 It is named after the Web Server Gateway Interface (the WSGI specification
 to which many Python web frameworks conform).
