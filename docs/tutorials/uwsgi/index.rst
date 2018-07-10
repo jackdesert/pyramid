@@ -178,7 +178,7 @@ files.
       $ cd /var/log/nginx
       $ tail -f error.log access.log
 
-    If you see an ``No such file or directory`` error in the Nginx log, verify
+    If you see an ``No such file or directory`` error in the Nginx error log, verify
     the name of the socket file specified in
     /etc/nginx/sites-enabled/myproject.conf.  Verify that the file reference
     there actually exists. If it does not, check where uWSGI is set to put the
@@ -188,11 +188,11 @@ files.
     fails, put your sockets somewhere writable by all, such as ``/tmp``
 
     If you see an ``upstream prematurely closed connection while reading
-    response header from upstream`` error in the Nginx log, something is wrong
+    response header from upstream`` error in the Nginx error log, something is wrong
     with your app or the way uWSGI is calling it. Check the output from the
     window where uWSGI is still running to see what error messages it gives.
 
-    If you see an ``Connection refused`` error in the Nginx log, check the
+    If you see an ``Connection refused`` error in the Nginx error log, check the
     permissions on the socket file that Nginx says it is attempting to connect
     to. The socket file is expected to be owned by the user ``ubuntu`` and the
     group ``www-data`` because those are the ``--uid`` and ``--gid`` options we
