@@ -15,6 +15,7 @@ files.
 
 
 #.  Install prerequisites
+
     .. code-block:: bash
 
        $ sudo apt install -y uwsgi-core uwsgi-plugin-python3 python3-cookiecutter \
