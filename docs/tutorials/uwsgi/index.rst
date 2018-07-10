@@ -1,7 +1,7 @@
 .. _uwsgi_tutorial:
 
-Running a CookieCutter :app:`Pyramid` Application under ``uWSGI``
-=================================================================
+Running a CookieCutter :app:`Pyramid` Application under ``uWSGI`` and Nginx
+===========================================================================
 
 uWSGI  that "aims at developing a full stack for building hosting services".[2] [2]
 
