@@ -76,15 +76,15 @@ files.
         app = loader.get_wsgi_app(app_name, config_vars)
 
 
-.
-.
-.
-.
-!!! Maybe app_name should point to [uwsgi] instead of [:main]...??
-.
-.
-.
-.
+
+
+
+
+#   Maybe app_name should point to [uwsgi] instead of [:main]...??
+
+
+
+
 
     :ref:`config_uri` is the project configuration file name.  It's best to use
     the ``production.ini`` file provided by your cookiecutter, as it contains
