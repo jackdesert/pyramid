@@ -180,7 +180,7 @@ files.
 
     If you see an ``No such file or directory`` error in the Nginx error log, verify
     the name of the socket file specified in
-    /etc/nginx/sites-enabled/myproject.conf.  Verify that the file reference
+    `/etc/nginx/sites-enabled/myproject.conf`.  Verify that the file reference
     there actually exists. If it does not, check where uWSGI is set to put the
     socket and that it actually exists there.  Eventually you will get past
     this error when both uWSGI and Nginx are both pointing to the same socket
