@@ -188,7 +188,7 @@ files.
     ``/etc/nginx/sites-enabled/myproject.conf``.  Verify that the file
     reference there actually exists. If it does not, check where uWSGI is set
     to put the socket and that it actually exists there.  Once both uWSGI and
-    Nginx both point to the same file and both have access to its housing
+    Nginx both point to the same file and both have access to its containing
     directory, you will be past this error.  If all else fails, put your
     sockets somewhere writable by all, such as ``/tmp``.
 
