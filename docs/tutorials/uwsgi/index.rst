@@ -3,9 +3,11 @@
 Running a CookieCutter :app:`Pyramid` Application under ``uWSGI``
 =================================================================
 
-:term:`mod_wsgi` is an Apache module developed by Graham Dumpleton.
-It allows :term:`WSGI` programs to be served using the Apache web
-server.
+uWSGI  that "aims at developing a full stack for building hosting services".[2] [2]
+
+:term:`uWSGI` is a software application for building hosting services.
+It is named after the Web Server Gateway Interface (the WSGI specification
+to which many Python web frameworks conform).
 
 This guide will outline broad steps that can be used to get a :app:`Pyramid`
 application running under Nginx via ``uWSGI``.  This particular tutorial
