@@ -80,7 +80,7 @@ files.
 
 
 
-#   Maybe app_name should point to [uwsgi] instead of [:main]...??
+#.  Maybe app_name should point to [uwsgi] instead of [:main]...??
 
 
 
@@ -98,13 +98,14 @@ files.
     See :ref:`logging_config`.
 
 
-#   Create a new directory at ``~/myproject/tmp`` to house a pidfile and a unix
+#.  Create a new directory at ``~/myproject/tmp`` to house a pidfile and a unix
     socket.  However, you'll need to make sure that *two* users have access to
     change into the ``~/myproject/tmp`` directory: your current user (mine is
     ``ubuntu`` and the user that Nginx will run as often named ``www-data`` or
     ``nginx``).
 
-#   Invoke uWSGI.
+
+#.  Invoke uWSGI.
 
 
     .. code-block:: bash
@@ -126,7 +127,8 @@ files.
         --gid www-data \                    # masquerade as the www-data group
         --virtualenv env                    # Use packages installed in your venv
 
-#   Verify that the output of the previous step includes a line that looks approximately like this:
+
+#.  Verify that the output of the previous step includes a line that looks approximately like this:
     .. code-block:: bash
 
        WSGI app 0 (mountpoint='/') ready in 1 seconds on interpreter 0x5615894a69a0 pid: 8827 (default app)
