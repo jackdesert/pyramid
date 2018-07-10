@@ -170,6 +170,45 @@ files.
 #.  Visit ``http://localhost`` in a browser.  You should see the
     sample application rendered in your browser.
 
+#.  If the app does not render in the browser, tail the nginx logs to
+    determine the cause. (Keep uWSGI running in a separate terminal window.)
+
+    .. code-block:: bash
+
+      $ cd /var/log/nginx
+      $ tail -f error.log access.log
+
+    If you see an ``No such file or directory`` error in the Nginx log, verify
+    the name of the socket file specified in
+    /etc/nginx/sites-enabled/myproject.conf.  Verify that the file reference
+    there actually exists. If it does not, check where uWSGI is set to put the
+    socket and that it actually exists there.  Eventually you will get past
+    this error when both uWSGI and Nginx are both pointing to the same socket
+    file location, in a place where they both have access to it. If all else
+    fails, put your sockets somewhere writable by all, such as ``/tmp``
+
+    If you see an ``upstream prematurely closed connection while reading
+    response header from upstream`` error in the Nginx log, something is wrong
+    with your app or the way uWSGI is calling it. Check the output from the
+    window where uWSGI is still running to see what error messages it gives.
+
+    If you see an ``Connection refused`` error in the Nginx log, check the
+    permissions on the socket file that Nginx says it is attempting to connect
+    to. The socket file is expected to be owned by the user ``ubuntu`` and the
+    group ``www-data`` because those are the ``--uid`` and ``--gid`` options we
+    specified when invoking uWSGI. If it is owned by a different user or group
+    than these, correct your uWSGI invocation until these are correct. Next
+    check permissions on the socket file. Permissions are expected to be
+    ``020`` as set by your uWSGI invocation. The ``2`` in the middle of ``020``
+    means group-writable, which is required because uWSGI first creates the
+    socket file, then Nginx (running as the group ``www-data``) must have write
+    permissions to it or it will not be able to connect. You can use
+    permissions more open than ``020``, but in testing this tutorial ``020``
+    was all that was required.
+
+
+
+
 :term:`uWSGI` has many knobs and a great variety of deployment modes. This
 is just one representation of how you might use it to serve up a CookieCutter :app:`Pyramid`
 application.  See the `uWSGI documentation
