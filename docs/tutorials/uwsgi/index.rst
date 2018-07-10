@@ -142,7 +142,7 @@ files.
     have access to installed packages.
 
 #.  Add a new file at ``/etc/nginx/sites-enabled/myproject.conf`` with
-    the following contents. Also change any occurrences of the word `ubuntu`
+    the following contents. Also change any occurrences of the word ``ubuntu``
     to your actual username.
 
     .. code-block:: nginx
